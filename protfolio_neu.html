@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+    <title>NY KUO Profolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Audiowide', cursive;
+
+        }
+        .flex {
+            display: flex;
+        }
+        .list-style{
+            list-style: none;
+        }
+        .wrapper {
+            height: 100vh;
+            width: 100vw;
+            margin: 0 auto;
+        }
+        .wra{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+      
+        .vertical-lr{
+            writing-mode: vertical-lr;
+        }
+        .sideways_lr{
+            writing-mode:vertical-rl;
+            transform: rotate(180deg);
+    
+        }
+
+        .list-style{
+            list-style: none;
+        }
+        .no_dis{
+            display: none;
+        }
+        .title{
+            font-size: 3rem;
+            padding: 5rem; 
+            transition: .5s;   
+            
+        }
+
+       
+                .title.active{
+            background: url(images/bg5.jpg);
+            transition: .5s;
+        }
+        .sub{
+            font-size: 5rem;
+            line-height: 1rem;
+            overflow: hidden;
+            transform: translate(-2vh,18vh)
+        }
+
+        .anime
+        {
+            animation:bounceInLeft 5s infinite;
+            -webkit-animation:bounceInLeft 5s infinite; /* Safari 和 Chrome */
+            }
+        /*-----------以上公用區 ----------- */
+        nav{
+            width: 100vw;
+            padding: 1rem;
+            /* position: absolute; */
+            }
+        nav ul li{
+            text-align: right;
+            font-size: 1.5rem;
+            color:lightgray;
+        }
+              
+        .upper {
+            background:  white;
+            width: 100vw;
+            height: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            transition:.5s;
+        }
+        .intro{
+            position: fixed;
+            display: flex;
+            font-family:'Dosis', Courier, monospace;
+            transform: translate(7vh,35vh); 
+            /* transform: translate(1vh,35vh);  跟大標一起  */
+         
+           font-weight:bold;
+           letter-spacing:0.2rem;
+           /* padding:0 0 1.2rem 1rem; */
+        }
+       
+        #welcome{
+            padding: 0;
+            width: 100%;
+            transition: .5s;
+           
+            }
+        #welcome p{
+            padding-bottom:5rem; 
+           
+        }
+        
+        .middle{
+            background: #022833;
+            position: absolute;
+            width: 100px;
+            height: 1.2rem;
+            color: white;
+            transform: translate(26vw,-10px);
+            text-align: center;
+                }
+        .lower ul {
+            display: flex;  
+            padding: 0;
+           flex-wrap: wrap;
+        }
+
+       
+        .lower {
+            background: #8ea0b7;
+            height: 50%;
+            width: 100%;
+            }
+        .lower ul li {
+            color: lightgray;
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+            padding: 1rem;
+            width: 12rem;
+            /* margin: 1rem; */
+            cursor: default;
+        }
+        .lower ul li a {
+            text-decoration: none;  
+            color: white;
+        }
+      @keyframes bounceInLeft {
+
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                animation-timing-function: cubic-bezier(.56, -0.52, .4, 1.25);
+            }
+
+            0% {
+                opacity: 0;
+                transform: translate3d(-3000px, 0, 0);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate3d(5px, 0, 0);
+            }
+
+            75% {
+                transform: translate3d(-20px, 0, 0);
+            }
+
+            90% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    
+        .menu:hover {
+            background: #8292a7;
+            width: 12rem;
+            border-radius: 3px;
+            transition:.5s;
+
+        }
+       
+        
+     
+
+       
+
+        /* .upper:active{
+        background: url(images/banner.jpg) no-repeat left ;
+        background-size: 100%;
+        animation: bounceInLeft 0.6s 0.65s linear forwards;
+        
+    } */
+
+
+        .upper:hover {
+            background: #022833;
+            color:white;
+            /* background: url(images/banner.jpg) no-repeat left; */
+          
+            /* animation:bounceInLeft 0.6s 0.65s linear forwards; */
+        }
+        /* .animate_bcl{
+            animation: bounceInLeft 0.6s 0.65s linear forwards;
+            background: url(images/banner.jpg) no-repeat left;
+        } */
+        
+
+        @keyframes move {
+
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                animation-timing-function: cubic-bezier(.56, -0.52, .4, 1.25);
+            }
+
+            0% {
+                opacity: 0;
+                transform: translate3d(-3000px, 0, 0);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate3d(25px, 0, 0);
+            }
+
+            75% {
+                transform: translate3d(-10px, 0, 0);
+            }
+
+            90% {
+                transform: translate3d(5px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* .upper:hover{
+        background: url(images/banner.jpg) no-repeat left;
+        background-size:100vw;
+        transition:.5s cubic-bezier(.56,-0.52,.4,1.25);
+        
+        /* (0, 0.51, 0.57, -0.64) */
+
+        .copyright {
+            writing-mode: vertical-lr;
+            font-size: 1rem;
+            padding:-5rem;
+            position: absolute;
+            left:0;
+            bottom:0;
+        }
+
+        @media only screen and (max-width: 600px) {
+        .title{
+            font-size: 1.8rem;
+            padding:4rem;
+        }
+        .lower ul li{
+            color: lightgray;
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+        
+            width: 10rem;
+            margin-left: 1rem;
+            cursor: default;
+        }
+        .middle{
+        display: none;
+        transition: .5s;
+                
+        }
+        h2{
+            font-size: 1.8rem;
+        }
+        .intro{
+            font-weight: 600;
+        }
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+    <!-- 上層 -->
+        <div class="upper">
+            <div class="wra">
+            <nav class="wra">
+                <ul>
+                    <li class="list-style">
+                       <a href="https://www.instagram.com/nykkk777/" target="_blank"> <i class="fab fa-instagram"></i></a></li>
+                    <li class="list-style"></li>
+                    <li class="list-style"></li>
+                </ul>
+            </nav>
+
+            <div class="intro flex-wrap d-flex">NaiYu Kuo == UI/UX Designer</div>
+                <div class="title sideways_lr wra" id="welcome">
+                    <p>WEL<br>COM<br>E<br>To<br>MY<br>CIR<br>CUS<br style="line-height:1rem">.</p>
+                </div>
+                <div class="title wra sub no_dis" id="me">
+                    <p>About Me</p>
+                </div>
+             
+                <div class="title wra sub no_dis" id="ui">
+                    <p>Daily Ui</p>
+                </div> 
+                <div class="title wra sub no_dis" id="dt">
+                    <p style="letter-spacing:-2px">Design Thinking</p>
+                </div> 
+                <div class="title wra sub no_dis" id="foto">
+                    <p>Photo Gallery </p>
+                </div>
+                <div class="title wra sub no_dis" id="contact">  
+                    <p>Contact Me</p>
+                </div> 
+                
+            </div>
+        </div>
+    <!-- 這裡是中間 -->
+        <div class="position-relative">
+            <div class="middle wra">
+                <p>Hi</p>
+            </div>
+        </div>
+    <!-- 下層 -->
+        <div class="lower">
+            <ul class="wra">
+                    
+                <li class="menu list-style" id="aboutme">
+                    <a href="">
+                        <h2>About<br>Me</h2>
+                    </a></li>
+                <li class="menu list-style" id="uiDesign">
+                    <a href="foto.html">
+                        <h2>UI<br>Design</h2>
+                    </a></li>
+                <li class="menu list-style" id="designThinking">
+                    <a href="designthinking.html">
+                        <h2>Design<br>Thinking</h2>
+                    </a></li>
+                <li class="menu list-style" id="fotos">
+                    <a href="">
+                        <h2>Photo<br>Gallery</h2>
+                    </a></li>
+                   
+                <li class="menu list-style" id="contactMe">
+                    <a href="">
+                        <h2>Contact<br>Me</h2>
+                    </a></li>
+            </ul>
+            <div class="copyright">
+                <p>&copy2018 ny Kuo</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+        <script src=js/animate.css></script>
+<script>
+//    $(function(){
+//     $('.menu')
+//     // .on('mouseover',function(){
+
+//     //     $('.upper').css({
+//     //         // background:'url(images/banner.jpg) no-repeat',
+//     //         animation:'bounceInLeft'
+//     //         });
+//     // })
+//     .on('mouseout',function(){
+//         $('.upper').css({
+//        background: 'white',
+       
+//         });
+        
+//     });
+
+//     });
+
+    // $(function(){
+    //     $('.upper').on('click', function(){
+    //         $('.upper').animate({
+    //         background:'url(images/banner.jpg) no-repeat',
+    //         animation:'bounceInLeft'
+    //     },
+    //     );
+    // });
+    // });
+
+
+    // $(".menu").mouseover(function(){
+    //   if($(".title").hasClass('no_dis')){
+    //     $(this).removeClass('no_dis')
+    //     $(".this").animate({'left': '100vw'}, 500).animate({'left': '-100vw'}, 1);
+    //   }else{
+    //     $(this).addClass('active')
+    //     $(".block").animate({'left': 0}, 500);
+    //   }
+    // });
+
+    var animate;
+
+    $(".menu").mouseover(function(){
+        $("#welcome").css('display','none');
+       
+
+      if($(".title").hasClass('no_dis')){
+
+        $(this).removeClass('no_dis');
+       
+      }else{
+        $(this).siblings.hide();}
+      
+    });
+
+     $(".menu").mouseout(function(){
+        $("#welcome").show(); 
+
+    }); 
+    
+   //首頁點menu
+
+    $("#aboutme").mouseover(function(){
+        $(".upper").css({
+            "background":"url(images/bg3.jpg) no-repeat",
+            "width":"100vw",
+            // "object-fit":"cover",
+            "animation":"bounceInLeft"}
+        );
+      if($(this).hasClass('menu')){
+        $("#me").removeClass('no_dis');
+       
+        $("#upper").addClass('anime');
+
+
+      }else{
+        $(".title").addClass('no_dis')
+       
+      }
+      $("#aboutme").mouseout(function(){
+          $("#me").addClass('no_dis');
+
+          $(".upper").removeClass('anime');
+      });
+
+    });
+    ///
+
+    $("#uiDesign").mouseover(function(){
+      if($(this).hasClass('menu')){
+        $("#ui").removeClass('no_dis')
+       
+      }else{
+        $(".title").addClass('no_dis')
+ 
+      }
+      $("#uiDesign").mouseout(function(){
+          $("#ui").addClass('no_dis');
+      });
+
+    });
+
+    ///
+
+    $("#designThinking").mouseover(function(){
+      if($(this).hasClass('menu')){
+        $("#dt").removeClass('no_dis')
+       
+      }else{
+        $(".title").addClass('no_dis')
+ 
+      }
+      $("#designThinking").mouseout(function(){
+          $("#dt").addClass('no_dis');
+      });
+
+    });
+    ////
+    $("#fotos").mouseover(function(){
+      if($(this).hasClass('menu')){
+        $("#foto").removeClass('no_dis')
+       
+      }else{
+        $(".title").addClass('no_dis')
+ 
+      }
+      $("#fotos").mouseout(function(){
+          $("#foto").addClass('no_dis');
+      });
+
+    });
+    ///
+    ////
+    $("#contactMe").mouseover(function(){
+      if($(this).hasClass('menu')){
+        $("#contact").removeClass('no_dis')
+       
+      }else{
+        $(".title").addClass('no_dis')
+ 
+      }
+      $("#contactMe").mouseout(function(){
+          $("#contact").addClass('no_dis');
+      });
+
+    });
+
+
+    </script>
+
+</body>
+
+</html>
