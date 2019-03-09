@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
-    <title>NY KUO Protfolio</title>
+    <title>NY KUO Profolio</title>
     <style>
         body {
             margin: 0;
@@ -78,7 +79,7 @@
             animation:bounceInLeft 5s infinite;
             -webkit-animation:bounceInLeft 5s infinite; /* Safari 和 Chrome */
             }
-        /*-----------以上共用區 ----------- */
+        /*-----------以上公用區 ----------- */
         nav{
             width: 100vw;
             padding: 1rem;
@@ -89,6 +90,7 @@
             font-size: 1.5rem;
             color:lightgray;
         }
+              
         .upper {
             background:  white;
             width: 100vw;
@@ -329,8 +331,8 @@
                 <div class="title wra sub no_dis" id="dt">
                     <p style="letter-spacing:-2px">Design Thinking</p>
                 </div> 
-                <div class="title wra sub no_dis" id="foto">
-                    <p>Photo Gallery </p>
+                <div class="title wra sub no_dis" id="project">
+                    <p>Special Project </p>
                 </div>
                 <div class="title wra sub no_dis" id="contact">  
                     <p>Contact Me</p>
@@ -353,16 +355,16 @@
                         <h2>About<br>Me</h2>
                     </a></li>
                 <li class="menu list-style" id="uiDesign">
-                    <a href="foto.html">
+                    <a href="ui.html" target="_blank">
                         <h2>UI<br>Design</h2>
                     </a></li>
                 <li class="menu list-style" id="designThinking">
-                    <a href="designthinking.html">
+                    <a href="designthinking.html" target="_blank">
                         <h2>Design<br>Thinking</h2>
                     </a></li>
-                <li class="menu list-style" id="fotos">
+                <li class="menu list-style" id="projects">
                     <a href="">
-                        <h2>Photo<br>Gallery</h2>
+                        <h2>Special<br>Project</h2>
                     </a></li>
                    
                 <li class="menu list-style" id="contactMe">
@@ -384,7 +386,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-        <script src=js/animate.css></script>
+ 
 <script>
 //    $(function(){
 //     $('.menu')
@@ -504,16 +506,16 @@
 
     });
     ////
-    $("#fotos").mouseover(function(){
+    $("#projects").mouseover(function(){
       if($(this).hasClass('menu')){
-        $("#foto").removeClass('no_dis')
+        $("#project").removeClass('no_dis')
        
       }else{
         $(".title").addClass('no_dis')
  
       }
-      $("#fotos").mouseout(function(){
-          $("#foto").addClass('no_dis');
+      $("#projects").mouseout(function(){
+          $("#project").addClass('no_dis');
       });
 
     });

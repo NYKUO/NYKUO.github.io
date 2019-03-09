@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ui Design
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display" >  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kosugi+Maru">
+    <link rel="stylesheet" href="css/shuffle-styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+  <style>
+    ul li{
+    list-style: none;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #022833;
+    margin:1rem;
+    }
+    a, a:active, a:visited{
+        color:#022833;
+        position: relative;
+    }
+    .nav-link:hover{
+        transition: .5s;
+        /* background: #8ea0b7; */
+        color: white;
+    }
+    .nav-link:hover:after{
+    right: 0;
+    left: 0;
+    }
+    .nav-link:after{
+    content: "";
+    background-color: #8ea0b7;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 99.9%;
+    left: 0;
+    z-index: -1;
+    transition: .6s;
+    }
+
+
+    h1{
+        font-family: 'Major Mono Display', monospace;
+        color:#5D6D77;
+    }
+    .topic{
+        width:50%;
+        min-height:4rem;
+        text-align: center;
+    }
+    .nav-item{
+        border: 1px solid #022833;
+        
+    }
+    .nav-item:hover{
+        border: 1px solid #8ea0b7;
+
+        transition: .5s;
+    }
+    .box{
+    width: 250px;
+    height:250px;
+    background: #8ea0b7;
+    }
+
+    .list-blk {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    }
+    .list-blk li img{
+        width:300px;
+    }
+
+    /* 修改LB樣式 不顯示文字有幾張圖*/
+    .lb-number {
+    display: none !important;
+     }
+    /* 修改圖片說明文字字型及大小 */
+     .lb-data, .lb-caption{
+        font-size: 1.5rem !important;
+        font-weight: unset !important;
+        font-family: 'Kosugi Maru', sans-serif;
+    }
+  </style>
+  <body>
+      <div class="container">
+            <div class="mx-auto my-3 topic">
+                <h1>ui DesiGn</h1> 
+            </div>
+
+         <nav>
+            <ul class="nav d-flex flex-wrap justify-content-center filter-options">
+                <li class="nav-item" >
+                    <a class="nav-link" data-group="all" href="#"> - 全部 -</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" data-group="web" href="#">web排版</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-group="app" href="#">App排版</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-group="other" href="#">一般設計</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-group="photo" href="#">隨手攝影</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="grid">
+            <ul class="list-blk">
+                <!-- <li data-groups='["all","photo"]'>
+                    <figure>
+                         <img src="images/bg0.jpg" alt="">
+                        <a href="images/bg0.jpg" data-lightbox="image-1" data-title="隨手攝影"><img src="images/bg0.jpg" alt=""></a>
+                    </figure>
+                </li> -->
+                <li data-groups='["all","other"]'>
+                    <figure>
+                        <a href="images/Takk1.png" data-lightbox="image-1" data-title="一般設計"><img src="images/Takk1.png" alt=""></a>
+                        <!-- <img src="images/Takk1.png" alt=""> -->
+                    </figure>
+                </li>
+                <li data-groups='["all","other"]'>
+                     <figure>
+                        <a href="images/Takk2.png" data-lightbox="image-1" data-title="一般設計"><img src="images/Takk2.png" alt=""></a>
+                        <!-- <img src="images/Takk2.png" alt=""> -->
+                    </figure>
+                </li>
+                <li data-groups='["all","app"]'>
+                        <figure>
+                            <a href="images/TAKK-app.png" data-lightbox="image-1" data-title="隨手攝影"><img src="images/TAKK-app.png" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","web"]'>
+                        <figure>
+                            <a href="images/50-web.png" data-lightbox="image-1" data-title="Web排版"><img src="images/50-web-cut.png" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","app"]'>
+                        <figure>
+                            <a href="images/50-app.png" data-lightbox="image-1" data-title="app排版"><img src="images/50-app-cut.jpg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+
+                <li data-groups='["all","web"]'>
+                        <figure>
+                            <a href="images/weather.png" data-lightbox="image-1" data-title="一般設計"><img src="images/weather.png" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","other"]'>
+                        <figure>
+                            <a href="images/Ai-credit.png" data-lightbox="image-1" data-title="一般設計"><img src="images/Ai-credit.png" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","web"]'>
+                        <figure>
+                            <a href="images/Web1280.png" data-lightbox="image-1" data-title="Web排版"><img src="images/Web1280.png" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","other"]'>
+                        <figure>
+                            <a href="images/world.svg" data-lightbox="image-1" data-title="一般設計"><img src="images/world.svg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/berlin.jpg" data-lightbox="image-1" data-title="隨手攝影"><img src="images/berlin.jpg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/milano2.JPG" data-lightbox="image-1" data-title="隨手攝影"><img src="images/milano2.JPG" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","other"]'>
+                        <figure>
+                            <a href="images/face.svg" data-lightbox="image-1" data-title="一般設計"><img src="images/face.svg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/holland.jpg" data-lightbox="image-1" data-title="隨手攝影"><img src="images/holland.jpg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/egypt.JPG" data-lightbox="image-1" data-title="隨手攝影"><img src="images/egypt.jpg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/milano.jpg" data-lightbox="image-1" data-title="隨手攝影"><img src="images/milano.jpg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/vatican.jpg" data-lightbox="image-1" data-title="隨手攝影"><img src="images/vatican.jpg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/pompeii.jpg" data-lightbox="image-1" data-title="隨手攝影"><img src="images/pompeii.JPG" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+                <li data-groups='["all","photo"]'>
+                        <figure>
+                            <a href="images/czech.jpg" data-lightbox="image-1" data-title="隨手攝影"><img src="images/czech.jpg" alt=""></a>
+                                    <!-- <img src="images/Takk2.png" alt=""> -->
+                        </figure>
+                </li>
+            </ul>
+        </div>
+
+<!-- 
+            <div class="d-flex flex-wrap justify-content-left">
+            <div class="box mx-2 my-2"></div>
+            <div class="box my-2 mx-2"></div>
+            <div class="box my-2 mx-2"></div>
+            <div class="box my-2 mx-2"></div>
+            <div class="box my-2 mx-2"></div>
+        </div> -->
+<!-- 
+        <div class="row my-shuffle-container">
+                <figure class="col-4@sm picture-item" data-groups='["animal"]' data-date-created="2016-08-12" data-title="Crocodile">
+                  <div class="aspect aspect--16x9">
+                    <div class="aspect__inner">
+                      <img src="images/Takk1.png" alt="A close, profile view of a crocodile looking directly into the camera" />
+                    </div>
+                  </div>
+                  <figcaption>Crocodile</figcaption>
+                </figure>
+                <figure class="col-4@sm picture-item" data-groups='["city"]' data-date-created="2016-06-09" data-title="Crossroads">
+                  <div class="aspect aspect--16x9">
+                    <div class="aspect__inner">
+                      <img src="images/Takk2.png" alt="A multi-level highway stack interchange in Puxi, Shanghai" />
+                    </div>
+                  </div>
+                  <figcaption>Crossroads</figcaption>
+                </figure>
+                <figure class="col-4@sm picture-item" data-groups='["nature","city"]' data-date-created="2015-10-20" data-title="Central Park">
+                  <div class="aspect aspect--16x9">
+                    <div class="aspect__inner">
+                      <img src="images/bg0.jpg" alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+                    </div>
+                  </div>
+                  <figcaption>Central Park</figcaption>
+                </figure>
+                <div class="col-1@sm my-sizer-element"></div>
+              </div> -->
+
+<!--光箱 -->
+
+
+
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/shuffle.js" ></script>
+    <script src="js/lightbox.js"></script>
+
+    <script>
+        
+        var Shuffle = window.Shuffle;
+        var element = document.querySelector('.list-blk');
+        //var sizer = element.querySelector('.my-sizer-element');
+
+        var shuffleInstance = new Shuffle(element, {
+        itemSelector: 'li',
+        //sizer: sizer // could also be a selector: '.my-sizer-element'
+        });
+
+
+        $('ul.filter-options a').on('click', function() {
+
+            var group = $(this).attr('data-group'); // 取得屬性
+            shuffleInstance.filter(group); // 把取得的屬性放入fliter
+
+            // shuffleInstance.filter('web');
+            // 原來的樣子＾
+
+
+            // var $this = $(this),
+            // $grid = $('.list-blk');
+            // $grid.shuffle($this.data('group'));
+            // console.log('123')
+                    
+        });
+                                    
+            // $('.list-blk').shuffle({
+            //     group: 'all',
+            //     speed: 400,
+            //     easing: 'ease-in-out'
+            // });
+
+            
+    </script>
+</body>
+</html>
