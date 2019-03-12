@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Special Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis|Noto+Sans+TC" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kosugi+Maru">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display" > 
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico" /> 
+  <style>
+      *{
+        font-family: 'Noto Sans TC', sans-serif;
+        
+        
+    }    
+    .ontop a , .ontop a:active, .ontop a:visited{
+        color:#022833;
+        position: relative;
+        line-height: .5rem;
+        font-family: 'Kosugi Maru', sans-serif!important;
+    }
+    .ontop a:hover{
+        transition: .5s;
+        /* background: #8ea0b7; */
+        color: white;
+        text-decoration: none;
+    }
+    @media only screen and (max-width: 376px) {
+
+      .ontop ul{
+        padding: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap:wrap; 
+      transition: .5s;
+      line-height: 2rem;
+      z-index: inherit;
+      list-style: none;
+      }     
+    }
+    .ontop ul{
+      padding:0;
+      top:0;
+      background-color: #8ea0b7;
+
+        list-style: none;
+        
+    }
+    .ontopil ul li{
+
+    color: #022833;
+    margin:2rem;
+    }
+    .ontop ul li:hover{
+        border-left: 2px solid #022833;
+        transition: .5s;
+        padding: 1rem;
+    }
+    .cover{
+    width:300px;
+    position: absolute;
+    height: auto;
+    }
+    .black{
+      background-color: black;
+      opacity: .6 ;
+      width: 300px;
+      position: absolute;
+      height: 168.75px;
+     transition:.5s; 
+     text-align: center;
+     color: white;
+     line-height: 160px;
+    }
+    .title{
+      font-size: 1.2rem;
+    }
+    .dis_none{
+      display: none;
+      transition:.5s;
+    }
+    .content{
+      /* width: 300px; */
+      position: absolute;
+      bottom:0;
+
+    }
+  </style>
+  </head>
+    <nav class="mx-auto ontop">
+      <ul class="position-fixed">
+          <li class="mx-2 my-1 py-1"> <a href="portfolio_neu.html">HOME</a></li>  
+          <li class="mx-2 my-1 py-1"> <a href="designthinking.html">DESIGN<br>THINKING</a></li>
+          <li class="mx-2 my-1 py-1"> <a href="ui.html">UI DESIGN</a> </li>
+          <li class="mx-2 my-1 py-1"><a href="">SPECIAL<br>PROJECT</a> </li>
+      </ul>
+    </nav>
+  <div class="container d-flex flex-wrap">
+      <div class="mx-auto my-5 title">
+        專案發想與簡介
+        <div id="fir" class="position-relative my-2 cover">
+          <img class="cover" src="images/cover.jpg" alt="">
+            <a href="leplanner.pdf">
+              <div id="coverplan" class="black dis_none">企劃書</div>
+            </a>
+        </div>
+      </div>
+
+      <div class="mx-auto my-5 title">
+          專案網站
+        <div id="sec" class="position-relative my-2 cover">
+              <img class="cover" src="images/wcover.png" alt="">
+                <a href="http://52.192.177.73/lePlanner/">
+                  <div id="coverweb" class="black dis_none">網站建置技術：css html js jq php等</div>
+                </a>
+            </div>
+        </div>
+
+
+  </div>
+
+
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+    <script>
+    $('#fir').mouseenter(function(){
+      $('#coverplan').removeClass('dis_none');
+    });
+
+    $('#fir').mouseleave(function(){
+      $('#coverplan').addClass('dis_none');
+    });
+
+    $('#sec').mouseenter(function(){
+      $('#coverweb').removeClass('dis_none');
+    });
+
+       $('#sec').mouseleave(function(){
+      $('#coverweb').addClass('dis_none');
+    });
+    </script>
+  </body>
+</html>
