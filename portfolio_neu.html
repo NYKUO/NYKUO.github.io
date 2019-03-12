@@ -14,15 +14,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display" >  
     <link href="css/animate.css" rel="stylesheet">
-
-    <title>NY KUO Profolio</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>NY KUO Portfolio</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Audiowide', cursive;
-
+            /* font-family: 'Major Mono Display', monospace; */
+            /* font-family:'Dosis', Courier, monospace; */
         }
         .flex {
             display: flex;
@@ -58,12 +60,9 @@
         .title{
             font-size: 3rem;
             padding: 5rem; 
-            transition: .5s;   
-            
+            transition: .5s;             
         }
-
-       
-                .title.active{
+         .title.active{
             background: url(images/bg5.jpg);
             transition: .5s;
         }
@@ -196,21 +195,13 @@
             transition:.5s;
 
         }
-       
-        
-     
-
-       
-
         /* .upper:active{
         background: url(images/banner.jpg) no-repeat left ;
         background-size: 100%;
         animation: bounceInLeft 0.6s 0.65s linear forwards;
         
     } */
-
-
-        .upper:hover {
+   .upper:hover {
             background: #022833;
             color:white;
             /* background: url(images/banner.jpg) no-repeat left; */
@@ -271,6 +262,7 @@
             position: absolute;
             left:0;
             bottom:0;
+            font-family: 'Dosis', Courier, monospace;
         }
 
         @media only screen and (max-width: 600px) {
@@ -298,7 +290,11 @@
             font-weight: 600;
         }
         }
-        
+        #lightbox{
+
+        font-family: 'Dosis', Courier, monospace;
+        }
+
     </style>
 
 </head>
@@ -350,44 +346,87 @@
         <div class="lower">
             <ul class="wra">
                     
-                <li class="menu list-style" id="aboutme">
-                    <a href="">
-                        <h2>About<br>Me</h2>
-                    </a></li>
+                <li class="menu list-style" id="aboutme" data-toggle="modal" data-target="#lightbox" style="color: white">
+                    <!-- <button type="button" data-toggle="modal" data-target="#lib"> -->
+                        <h2>About<br>Me</h2> 
+                    <!-- </button> -->
+                </li>
                 <li class="menu list-style" id="uiDesign">
                     <a href="ui.html" target="_blank">
                         <h2>UI<br>Design</h2>
-                    </a></li>
+                    </a>
+                </li>
                 <li class="menu list-style" id="designThinking">
                     <a href="designthinking.html" target="_blank">
                         <h2>Design<br>Thinking</h2>
-                    </a></li>
+                    </a>
+                </li>
                 <li class="menu list-style" id="projects">
-                    <a href="">
+                    <a href="project.html">
                         <h2>Special<br>Project</h2>
-                    </a></li>
-                   
+                    </a>
+                </li>
                 <li class="menu list-style" id="contactMe">
                     <a href="">
                         <h2>Contact<br>Me</h2>
-                    </a></li>
+                    </a>
+                </li>
             </ul>
             <div class="copyright">
-                <p>&copy2018 ny Kuo</p>
+                <p>&copy2018 NY KUO</p>
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="lightbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none">
+                  <!-- <h5 class="modal-title" style="text-align: center" id="exampleModalLongTitle">Hi, I'm NaiYu KUO </h5> -->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+               <div class="d-flex flex-wrap">
+                    <div>
+                        <img class="mx-3 my-2" src="images/foto.png" alt="">
+                        <h5 class="modal-title mx-3" style="text-align:left;font-weight: unset;" id="exampleModalLongTitle">Hi, <br>I'm Nai-Yu KUO / 郭 乃瑜 </h5>
+                    </div>
+                    <div class="border-top border-bottom" style="width: 30%;line-height:1.8rem;">
+                            <br>目標成為 <br>一個抵八個的  <br>  UI/UX設計師
+
+                        <br>/ 喜歡從不同角度
+                        <br>  思考認識世界
+                        <br> / 內建踩雷除錯的 <br> 屬性
+
+                       <br> / 目前熱衷於寫code改善使用者體驗  
+                    </div>
+                </div>
+                </div>
+                <div class="modal-footer" style="border-top: none">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
 
    
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
  
 <script>
+
+// $('#lib').on('hidden.bs.modal', function (e) {
+//   console.log("123")
+// });
 //    $(function(){
 //     $('.menu')
 //     // .on('mouseover',function(){
@@ -534,6 +573,9 @@
       });
 
     });
+    $("#contactMe").click(function(){
+        alert("xdrzny@gmail.com");
+    })
 
 
     </script>
